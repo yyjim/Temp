@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J61-tb-oHb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J61-tb-oHb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,23 +79,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4hj-5B-OGD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bu5-HR-9Jv">
-                                <rect key="frame" x="0.0" y="324" width="375" height="343"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bu5-HR-9Jv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-Os-vPx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-Os-vPx">
                                         <rect key="frame" x="25" y="86.5" width="325" height="21.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.41564428809999998" green="0.41570827360000001" blue="0.41562962530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSO-Js-3iX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSO-Js-3iX">
                                         <rect key="frame" x="25" y="60" width="325" height="26.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbL-aR-Hty">
-                                        <rect key="frame" x="20" y="133" width="335" height="210"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbL-aR-Hty">
+                                        <rect key="frame" x="20" y="133" width="335" height="470"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.97997993230819702" green="0.98449438810348511" blue="0.98808795213699341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" red="0.34827950495440946" green="0.36032320346151081" blue="0.36118051551637198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,37 +108,20 @@
                                     </textView>
                                 </subviews>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="GbL-aR-Hty" secondAttribute="bottom" id="4FO-nL-iCs"/>
-                                    <constraint firstAttribute="trailing" secondItem="JSO-Js-3iX" secondAttribute="trailing" constant="25" id="61y-Nc-J3R"/>
-                                    <constraint firstAttribute="trailing" secondItem="GbL-aR-Hty" secondAttribute="trailing" constant="20" id="Aba-Lq-5in"/>
-                                    <constraint firstAttribute="trailing" secondItem="nKe-Os-vPx" secondAttribute="trailing" constant="25" id="ClK-TJ-ldj"/>
-                                    <constraint firstItem="nKe-Os-vPx" firstAttribute="top" secondItem="JSO-Js-3iX" secondAttribute="bottom" id="DI3-rh-vIL"/>
-                                    <constraint firstItem="JSO-Js-3iX" firstAttribute="top" secondItem="bu5-HR-9Jv" secondAttribute="top" constant="60" id="Fns-zb-73F"/>
-                                    <constraint firstItem="GbL-aR-Hty" firstAttribute="leading" secondItem="bu5-HR-9Jv" secondAttribute="leading" constant="20" id="Jg9-Fu-otA"/>
-                                    <constraint firstItem="JSO-Js-3iX" firstAttribute="leading" secondItem="bu5-HR-9Jv" secondAttribute="leading" constant="25" id="OEU-VE-2Xf"/>
-                                    <constraint firstItem="GbL-aR-Hty" firstAttribute="top" secondItem="nKe-Os-vPx" secondAttribute="bottom" constant="25" id="sky-vU-l1O"/>
-                                    <constraint firstItem="nKe-Os-vPx" firstAttribute="leading" secondItem="bu5-HR-9Jv" secondAttribute="leading" constant="25" id="vwO-OG-ffx"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zks-CR-Qzu" firstAttribute="top" secondItem="bu5-HR-9Jv" secondAttribute="bottom" id="0LN-2D-HTs"/>
                             <constraint firstItem="4hj-5B-OGD" firstAttribute="height" secondItem="Dan-DS-deR" secondAttribute="height" multiplier="0.5" id="52N-eR-Las"/>
                             <constraint firstItem="4hj-5B-OGD" firstAttribute="leading" secondItem="Dan-DS-deR" secondAttribute="leading" id="CNH-eI-8lv"/>
-                            <constraint firstAttribute="trailing" secondItem="bu5-HR-9Jv" secondAttribute="trailing" id="Sam-fX-1nt"/>
                             <constraint firstItem="4hj-5B-OGD" firstAttribute="top" secondItem="T7C-k3-Ncr" secondAttribute="bottom" id="g6w-PH-yru"/>
-                            <constraint firstItem="bu5-HR-9Jv" firstAttribute="top" secondItem="T7C-k3-Ncr" secondAttribute="bottom" constant="260" id="hMa-On-fhg"/>
                             <constraint firstAttribute="trailing" secondItem="4hj-5B-OGD" secondAttribute="trailing" id="iY3-ul-yw8"/>
-                            <constraint firstItem="bu5-HR-9Jv" firstAttribute="leading" secondItem="Dan-DS-deR" secondAttribute="leading" id="kbP-BL-ow7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="avatarImageView" destination="4hj-5B-OGD" id="SoI-DL-tcn"/>
                         <outlet property="bioTextView" destination="GbL-aR-Hty" id="Hp7-os-P9V"/>
                         <outlet property="bioView" destination="bu5-HR-9Jv" id="VN7-uQ-bcV"/>
-                        <outlet property="bioViewVerticalConstraint" destination="hMa-On-fhg" id="tR5-Gm-G8A"/>
                         <outlet property="nameLabel" destination="JSO-Js-3iX" id="k6A-ru-7YN"/>
                         <outlet property="titleLabel" destination="nKe-Os-vPx" id="VK5-lZ-poD"/>
                     </connections>

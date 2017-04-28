@@ -16,6 +16,7 @@ static const CGFloat kbioViewDownConstraint = 260;
 
 @interface DetailViewController ()
 
+@property (strong, nonatomic) UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *bioView;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -36,65 +37,43 @@ static const CGFloat kbioViewDownConstraint = 260;
     [super viewDidLoad];
 
     self.navigationItem.title = self.employee.firstName;
+    
+    self.scrollView = [[UIScrollView alloc] init];
+    self.scrollView.frame = self.view.bounds;
+    self.scrollView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
+    self.scrollView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.scrollView];
+    
+    self.avatarImageView.frame = CGRectMake(0, 0, 100, 100);
+    [self.avatarImageView.heightAnchor
+     constraintEqualToAnchor:self.view.heightAnchor multiplier:0.5];
+    [self.avatarImageView.widthAnchor
+     constraintEqualToAnchor:self.view.widthAnchor multiplier:1];
+    
+    [self.bioView removeFromSuperview];
+    
+    self.scrollView.contentSize = CGSizeMake(375, 900);
+    [self.scrollView addSubview:self.bioView];
+    self.bioView.frame = CGRectMake(0, 260, 375, 667);
+    
+    self.dragbleView = [[CMBBioView alloc] initWithFrame:self.view.bounds];
+    [self.bioView insertSubview:self.dragbleView atIndex:0];
+    
     self.avatarImageView.image = self.employee.avatarImage;
     self.titleLabel.text = self.employee.title;
-    self.nameLabel.text = [NSString stringWithFormat:@"%@ %@", self.employee.firstName, self.employee.lastName];
+    self.nameLabel.text = [NSString stringWithFormat:@"%@ %@",
+                           self.employee.firstName, self.employee.lastName];
     self.bioTextView.text = self.employee.bio;
     self.bioTextView.scrollEnabled = NO;
-    [self setupDrawDiagonal];
 }
 
-- (void)setupDrawDiagonal
+- (void)viewDidLayoutSubviews
 {
-    self.dragbleView = [[CMBBioView alloc] initWithFrame:self.view.frame];
-    [self.bioView insertSubview:self.dragbleView belowSubview:self.bioTextView];
-    [self.bioView insertSubview:self.dragbleView belowSubview:self.nameLabel];
-    [self.bioView insertSubview:self.dragbleView belowSubview:self.titleLabel];
+    [super viewDidLayoutSubviews];
     
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(handlePanGesture:)];
-    [self.dragbleView addGestureRecognizer:pan];
+    self.bioView.frame = CGRectMake(0, 260,
+                                    self.view.bounds.size.width,
+                                    self.view.bounds.size.height);
 }
-
-
-
-- (void)handlePanGesture:(UIPanGestureRecognizer *)recognizer
-{
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    NSLog(@"%f,%f",translation.x, translation.y);
-    
-    CGFloat progress = translation.y / kbioViewDownConstraint;
-    NSLog(@"%f",progress);
-    progress = MAX(MIN(1, progress), 0);
-    
-    self.bioViewVerticalConstraint.constant = progress * kbioViewDownConstraint;
-}
-//    if (progress > 0.02) {
-//        self.bioViewVerticalConstraint.constant = 260;
-//    } else {
-//        self.bioViewVerticalConstraint.constant = 0;
-//    }
-//    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-//        [self.view layoutIfNeeded];
-//    } completion:nil];
-//    
-    
-//    switch (recognizer.state) {
-//        case UIGestureRecognizerStateBegan:
-//            break;
-//        case UIGestureRecognizerStateChanged:
-//            NSLog(@"progress: %f",progress);
-//
-//            [self.view layoutIfNeeded];
-//            break;
-//        case UIGestureRecognizerStateEnded:
-//
-//            break;
-//        default:
-//            break;
-//    }
-//}
-
-
 
 @end
