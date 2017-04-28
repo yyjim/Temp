@@ -10,7 +10,6 @@
 #import "UIColor+CMBColor.h"
 #import "UIImage+ImageFetcher.h"
 #import "CMBBioView.h"
-#import <Masonry/Masonry.h>
 
 static const CGFloat kbioViewUpConstraint = 0;
 static const CGFloat kbioViewDownConstraint = 260;
